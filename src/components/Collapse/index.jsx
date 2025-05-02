@@ -13,7 +13,9 @@ function Collapse({ title, content }) {
       <div className="collapse">
         <div className="collapse_header" onClick={toggleCollapse}>
           <h3 className="collapse_title">{title}</h3>
-          <span className={`arrow ${isOpen ? "open" : ""}`}>▼</span>
+          <span className={`arrow ${isOpen ? "open" : ""}`}>
+          <i className={`fa-solid ${isOpen ? "fa-angle-down" : "fa-angle-up"}`}></i>
+          </span>
         </div>
         {isOpen && <div className="collapse_content">{content}</div>}
       </div>

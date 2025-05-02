@@ -7,7 +7,11 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import ErrorPage from './pages/ErrorPage';
 import About from './pages/About';
+import Property from './pages/Property';
 import './index.css';
+import '@fortawesome/fontawesome-free/css/all.css';
+
+
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -19,6 +23,7 @@ root.render(
         <Route path="/" element={<Home />} />
         <Route path="/test" element={<Test />} />
         <Route path="/about" element={<About />} />
+        <Route path="/property" element={<Property />} />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
       <Footer />

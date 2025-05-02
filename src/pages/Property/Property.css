@@ -1,0 +1,20 @@
+.buttons{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+.title_property{
+    font-size: 36px;
+    color: #FF6060;
+}
+.title2_property{
+    font-size: 18px;
+}
+.btn{
+    background-color: #FF6060;
+    color:  #FFFFFF;
+    border: none;
+    border-radius: 10px;
+    width: 115px;
+    height: 25px;
+}

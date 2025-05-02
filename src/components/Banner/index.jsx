@@ -8,7 +8,6 @@ function Banner(props) {
         <div className = "banner" style={{ backgroundImage: `url(${props.bannerImg})` }} >
             <div className = "banner_overlay">
                 {props.title && <h1 className="banner_text">{props.title}</h1>}
-                <h1 className="banner_text">{props.title}</h1>
             </div>
         </div>
     );
