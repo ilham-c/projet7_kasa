@@ -10,6 +10,8 @@ import About from './pages/About';
 import Property from './pages/Property';
 import './index.css';
 import '@fortawesome/fontawesome-free/css/all.css';
+import '@fortawesome/fontawesome-free/css/all.min.css';
+
 
 
 
@@ -23,7 +25,7 @@ root.render(
         <Route path="/" element={<Home />} />
         <Route path="/test" element={<Test />} />
         <Route path="/about" element={<About />} />
-        <Route path="/property" element={<Property />} />
+        <Route path="/property/:id" element={<Property />} />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
       <Footer />

@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import "./ImageSlider.css";
+import arrowRight from '../../assets/arrow_right.png';
+import arrowLeft from '../../assets/arrow_left.png';
 
 function ImageSlider({ images }) {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -19,15 +21,15 @@ function ImageSlider({ images }) {
   return (
     <div className="image_slider">
       <button className="prev" onClick={handlePrev}>
-        <i className="fas fa-chevron-left"></i> {/* Icône flèche gauche */}
+        <img src={arrowLeft} alt="previous" />
       </button>
       <img
-        src={images[currentIndex].url}
+        src={images[currentIndex]}
         alt={`Image ${currentIndex}`}
         className="slider-image"
       />
       <button className="next" onClick={handleNext}>
-        <i className="fas fa-chevron-right"></i> {/* Icône flèche droite */}
+        <img src={arrowRight} alt="next" />
       </button>
     </div>
   );

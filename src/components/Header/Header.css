@@ -24,3 +24,15 @@ ul{
     font-size: 24px;
     font-weight: 500;
 }
+
+.navItem a {
+    text-decoration: none;
+    color: black;
+  }
+  
+
+.navItem a.active {
+    text-decoration: underline;
+    color:  black; /* ou la couleur que tu préfères */
+  }
+  

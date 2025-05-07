@@ -9,10 +9,10 @@ function Header(){
             <div className="header_logo"><img src={LOGO} alt="Kasa" /></div>
             <ul className="header_titles">
                 <li className="navItem">
-                    <NavLink to="/" className="navLink">Accueil</NavLink>
+                    <NavLink to="/" className={({ isActive }) => (isActive ? 'active' : 'inactive')}>Accueil</NavLink>
                 </li>
                 <li className="navItem">
-                    <NavLink to="/about" className="navLink">A propos</NavLink>
+                    <NavLink to="/about" className={({ isActive }) => (isActive ? 'active' : 'inactive')}>A propos</NavLink>
                 </li>
             </ul>
         </nav>
