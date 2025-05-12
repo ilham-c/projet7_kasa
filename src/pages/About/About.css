@@ -5,3 +5,14 @@
     flex-direction: column;
     margin-bottom: 30px;
 }
+
+
+
+@media screen and (max-width:768px) {
+
+.about_container{
+    width: 100%;
+    padding-bottom: 47px;
+}
+        
+}

@@ -33,6 +33,21 @@ ul{
 
 .navItem a.active {
     text-decoration: underline;
-    color:  black; /* ou la couleur que tu préfères */
+    color:  black;
   }
   
+@media screen and (max-width: 768px) {
+
+
+.header_logo img{
+    width: 145px;
+}
+.header_titles{
+    gap: 26px;
+}
+.navItem{
+    font-size: 12px;
+    white-space: nowrap;
+}
+    
+}

@@ -8,3 +8,27 @@
     justify-content: center;
     gap: 20px;
 }
+
+.footer_subtitle_mobile {
+    display: none;
+  }
+  
+.footer_subtitle_desktop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+
+@media screen and (max-width: 768px) {
+
+.footer_subtitle_desktop {
+    display: none;
+    }
+  
+.footer_subtitle_mobile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+  }

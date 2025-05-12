@@ -2,8 +2,20 @@
 
 body {
   margin: 0;
-  padding: 0 50px;
+  padding: 0;
   font-family: 'Montserrat', sans-serif;
+}
+
+.container{
+  max-width: 1240px;
+  padding: 0 50px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 0 20px;
+  }
 }
 
 
