@@ -53,9 +53,75 @@
 .host_picture{
     width: 64px;
     height: 64px;
+    border-radius: 50px;
 }
 .host_name{
     color: #FF6060;
     font-size: 18px;
     font-weight: 500;
 }
+.host_rating {
+    display: none;
+}
+
+
+@media screen and (max-width: 768px) {
+
+.header_property .host {
+    display: none;
+}
+  
+ 
+.host_rating {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; 
+}
+  
+
+.rating {
+    margin-top: 20px;
+}
+  
+.host_info {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+    align-self: flex-end;
+    }
+  
+   
+.rating i {
+    font-size: 18px;
+    margin-right: 4px;
+}
+.host_name {
+    font-size: 14px;
+}
+.host_picture {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+}
+.buttons_rating{
+    display: flex;
+    flex-direction: column;
+  }
+.collapse_container_property{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 15px;
+   
+}
+.collapse_container_property .collapse{
+    width: 100%;
+}
+.title_property{
+    font-size: 18px;
+}
+.title2_property{
+    font-size: 14px;
+}
+}
+

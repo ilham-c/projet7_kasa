@@ -12,6 +12,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 25px;
   }
   
 
@@ -31,5 +32,27 @@
 
 .next {
     right: 30px;
+}
+
+@media screen and (max-width:768px) {
+
+.image_slider{
+    box-sizing: border-box;
+    height: 255px;
+    padding-top: 15px;
+}
+
+.slider-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+.prev img,
+.next img{
+    width: 11px;
+    height: 19px;
+}
 }
 

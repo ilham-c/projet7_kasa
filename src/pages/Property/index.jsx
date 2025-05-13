@@ -5,13 +5,11 @@ import ImageSlider from "../../components/ImageSlider";
 import { useParams } from "react-router-dom";
 import properties from "../../data/properties.json";
 
-
 function Property() {
   const { id } = useParams();
   console.log(id);
   const property = properties.find((property) => property.id === id);
   console.log(property);
-  
 
   return (
     <>
@@ -23,7 +21,11 @@ function Property() {
         <h1 className="title_property">{property.title}</h1>
         <div className="host">
           <span className="host_name">{property.host.name}</span>
-          <img className="host_picture" src={property.host.picture} alt="propriétaire" />
+          <img
+            className="host_picture"
+            src={property.host.picture}
+            alt="propriétaire"
+          />
         </div>
       </div>
       <h2 className="title2_property">{property.location}</h2>
@@ -36,36 +38,49 @@ function Property() {
             </button>
           ))}
         </div>
-          
-        <div className="rating">
-  {/* Générer les étoiles colorées */}
-  {function() {
-    let stars = [];
-    for (let i = 0; i < parseInt(property.rating); i++) {
-      stars.push(<i key={i} className="fa-solid fa-star colored"></i>);
-    }
-    return stars;
-  }()}
 
-  {/* Générer les étoiles grises */}
-  {function() {
-    let stars = [];
-    for (let i = 0; i < 5 - parseInt(property.rating); i++) {
-      stars.push(<i key={i + parseInt(property.rating)} className="fa-solid fa-star"></i>);
-    }
-    return stars;
-  }()}
-</div>
+        <div className="host_rating">
+          <div className="rating">
+            {/* Générer les étoiles colorées */}
+            {(function () {
+              let stars = [];
+              for (let i = 0; i < parseInt(property.rating); i++) {
+                stars.push(
+                  <i key={i} className="fa-solid fa-star colored"></i>
+                );
+              }
+              return stars;
+            })()}
 
+            {/* Générer les étoiles grises */}
+            {(function () {
+              let stars = [];
+              for (let i = 0; i < 5 - parseInt(property.rating); i++) {
+                stars.push(
+                  <i
+                    key={i + parseInt(property.rating)}
+                    className="fa-solid fa-star"
+                  ></i>
+                );
+              }
+              return stars;
+            })()}
+          </div>
 
-
-
-
+          <div className="host_info">
+            <span className="host_name">{property.host.name}</span>
+            <img
+              className="host_picture"
+              src={property.host.picture}
+              alt="propriétaire"
+            />
+          </div>
+        </div>
       </div>
 
       <div className="collapse_container_property">
-          <Collapse title="Description" content={property.description} />
-          <Collapse
+        <Collapse title="Description" content={property.description} />
+        <Collapse
           title="Équipements"
           content={
             <ul>
@@ -74,7 +89,7 @@ function Property() {
               ))}
             </ul>
           }
-          />
+        />
       </div>
     </>
   );
