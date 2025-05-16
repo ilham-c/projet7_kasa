@@ -46,6 +46,7 @@ ul{
 }
 .header_titles{
     gap: 26px;
+    font-size: 12px;
 }
 .navItem{
     font-size: 12px;

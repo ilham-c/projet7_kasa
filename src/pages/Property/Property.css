@@ -28,10 +28,7 @@
 .collapse_container_property .collapse{
     width: 45%;
 }
-.buttons_rating{
-    display: flex;
-    justify-content: space-between;
-}
+
 .rating i{
     color: #E3E3E3;
     padding: 5px;
@@ -45,11 +42,6 @@
         justify-content: space-between;
         align-items: center;
 }
-.host{
-    display: flex;
-    align-items: center;
-    gap:5px;
-}
 .host_picture{
     width: 64px;
     height: 64px;
@@ -60,9 +52,22 @@
     font-size: 18px;
     font-weight: 500;
 }
-.host_rating {
-    display: none;
+.host{
+    display: flex;
+    align-items: center;
+    gap:5px;
 }
+
+.buttons_rating{
+    display: flex;
+    justify-content: space-between;
+}
+.host_rating {
+ display: none;
+}
+
+
+
 
 
 @media screen and (max-width: 768px) {

@@ -1,20 +1,22 @@
 import React from "react";
 import "./Property.css";
 import Collapse from "../../components/Collapse";
-import ImageSlider from "../../components/ImageSlider";
-import { useParams } from "react-router-dom";
+import Gallery from "../../components/Gallery";
+import { useParams, Navigate } from "react-router-dom";
 import properties from "../../data/properties.json";
 
 function Property() {
   const { id } = useParams();
-  console.log(id);
   const property = properties.find((property) => property.id === id);
-  console.log(property);
+  
 
+if (!property) {
+  return <Navigate to="/error" />;
+}
   return (
     <>
-      <div className="img">
-        <ImageSlider images={property.pictures} />
+      <div className="img">  
+        <Gallery images={property.pictures}  showArrows={property.pictures.length > 1} />
       </div>
 
       <div className="header_property">
@@ -26,6 +28,7 @@ function Property() {
             src={property.host.picture}
             alt="propriétaire"
           />
+          <div className="rating"></div>
         </div>
       </div>
       <h2 className="title2_property">{property.location}</h2>

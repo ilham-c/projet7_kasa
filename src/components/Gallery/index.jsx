@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import "./ImageSlider.css";
+import "./Gallery.css";
 import arrowRight from '../../assets/arrow_right.png';
 import arrowLeft from '../../assets/arrow_left.png';
 
-function ImageSlider({ images }) {
+function Gallery({ images, showArrows }) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const handlePrev = () => {
@@ -20,19 +20,30 @@ function ImageSlider({ images }) {
 
   return (
     <div className="image_slider">
+       {showArrows && (   
       <button className="prev" onClick={handlePrev}>
         <img src={arrowLeft} alt="previous" />
       </button>
+        )}
       <img
         src={images[currentIndex]}
         alt={`Image ${currentIndex}`}
         className="slider-image"
       />
+
+       {showArrows && (
       <button className="next" onClick={handleNext}>
         <img src={arrowRight} alt="next" />
       </button>
+        )}
+
+         {showArrows && (
+        <div className="image_counter">
+          {currentIndex + 1} / {images.length}
+        </div>
+      )}
     </div>
   );
 }
 
-export default ImageSlider;
+export default Gallery;

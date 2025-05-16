@@ -12,7 +12,9 @@
 
 .collapse_title{
     color: #FFFFFF;
-    padding-left: 15px
+    padding-left: 15px;
+    display: flex;
+    align-items: center;
 }
 
 .arrow{
