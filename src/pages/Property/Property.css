@@ -9,6 +9,7 @@
 }
 .title2_property{
     font-size: 18px;
+    margin-top: -9px;
 }
 .btn{
     background-color: #FF6060;
@@ -62,8 +63,10 @@
     display: flex;
     justify-content: space-between;
 }
-.host_rating {
- display: none;
+.rating{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: -6px;
 }
 
 
@@ -71,32 +74,23 @@
 
 
 @media screen and (max-width: 768px) {
-
-.header_property .host {
-    display: none;
-}
   
- 
-.host_rating {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between; 
+.container{
+    position: relative;
 }
-  
-
 .rating {
-    margin-top: 20px;
+    position: absolute;
+    bottom: 166px;
 }
-  
-.host_info {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 10px;
-    align-self: flex-end;
-    }
-  
-   
+.host{
+    position: absolute;
+    right: 20px;
+    top: 127px;
+}
+.header_property{
+    position: relative;
+}
+
 .rating i {
     font-size: 18px;
     margin-right: 4px;
@@ -117,6 +111,7 @@
     display: flex;
     flex-direction: column;
     padding-bottom: 15px;
+    padding-top: 22px;
    
 }
 .collapse_container_property .collapse{
@@ -127,6 +122,8 @@
 }
 .title2_property{
     font-size: 14px;
+    margin-bottom: 29px;
+    margin-top: 0;
 }
 }
 

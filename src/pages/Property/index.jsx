@@ -28,22 +28,10 @@ if (!property) {
             src={property.host.picture}
             alt="propriétaire"
           />
-          <div className="rating"></div>
         </div>
-      </div>
-      <h2 className="title2_property">{property.location}</h2>
-
-      <div className="buttons_rating">
-        <div className="buttons">
-          {property.tags.map((tag, index) => (
-            <button key={index} className="btn">
-              {tag}
-            </button>
-          ))}
         </div>
-
-        <div className="host_rating">
-          <div className="rating">
+        <h2 className="title2_property">{property.location}</h2>
+        <div className="rating">
             {/* Générer les étoiles colorées */}
             {(function () {
               let stars = [];
@@ -69,16 +57,19 @@ if (!property) {
               return stars;
             })()}
           </div>
+       
+      
+     
 
-          <div className="host_info">
-            <span className="host_name">{property.host.name}</span>
-            <img
-              className="host_picture"
-              src={property.host.picture}
-              alt="propriétaire"
-            />
-          </div>
+      <div className="buttons_rating">
+        <div className="buttons">
+          {property.tags.map((tag, index) => (
+            <button key={index} className="btn">
+              {tag}
+            </button>
+          ))}
         </div>
+
       </div>
 
       <div className="collapse_container_property">
