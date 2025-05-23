@@ -1,7 +1,7 @@
 import React from "react";
 import "./About.css";
 import Banner from '../../components/Banner';
-import BannerImg from '../../assets/IMG_about.png';
+import BannerImg from '../../assets/IMG_about.jpg';
 import Collapse from "../../components/Collapse";
 
 
@@ -12,7 +12,7 @@ function About() {
    return (
     <>
 
-    <Banner bannerImg={BannerImg}  />
+    <Banner bannerImg={BannerImg} overlayOpacity={0.3} />
         <div className="about_container">
             <Collapse
                 title= "Fiabilité" 

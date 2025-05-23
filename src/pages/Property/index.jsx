@@ -22,7 +22,10 @@ if (!property) {
       <div className="header_property">
         <h1 className="title_property">{property.title}</h1>
         <div className="host">
-          <span className="host_name">{property.host.name}</span>
+        <div className="host_name">
+          <span>{property.host.name.split(" ")[0]}</span> {/* Prénom */}
+          <span>{property.host.name.split(" ")[1]}</span> {/* Nom */}
+        </div>
           <img
             className="host_picture"
             src={property.host.picture}
